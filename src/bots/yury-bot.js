@@ -34,14 +34,14 @@ export class YuryBot extends Bot {
                 this.right();
 
                 // Стрелять вниз при развороте
-                // this.fire(ACTIONS.down);
+                this.fire(ACTIONS.down);
 
             }  else {
                 this.right();
                 this.down();
 
                 // Стрелять вниз при развороте
-                // this.fire(ACTIONS.right);
+                this.fire(ACTIONS.right);
             }
 
         }   // Если нельзя ехать наверх и вправо
@@ -53,14 +53,14 @@ export class YuryBot extends Bot {
                 this.left();
 
                 // Стрелять вниз при развороте
-                // this.fire(ACTIONS.down);
+                this.fire(ACTIONS.down);
 
             }  else {
                 this.left();
                 this.down();
 
                 // Стрелять вниз при развороте
-                // this.fire(ACTIONS.left);
+                this.fire(ACTIONS.left);
             }
 
         }   // Если нельзя ехать вниз и вправо
@@ -72,14 +72,14 @@ export class YuryBot extends Bot {
                 this.left();
 
                 // Стрелять вниз при развороте
-                // this.fire(ACTIONS.up);
+                this.fire(ACTIONS.up);
 
             }  else {
                 this.left();
                 this.up();
 
                 // Стрелять вниз при развороте
-                // this.fire(ACTIONS.left);
+                this.fire(ACTIONS.left);
             }
 
         }   // Если нельзя ехать вниз и влево
@@ -91,14 +91,14 @@ export class YuryBot extends Bot {
                 this.right();
 
                 // Стрелять вниз при развороте
-                // this.fire(ACTIONS.up);
+                this.fire(ACTIONS.up);
 
             }  else {
                 this.right();
                 this.up();
 
                 // Стрелять вниз при развороте
-                // this.fire(ACTIONS.right);
+                this.fire(ACTIONS.right);
             }
 
         }   // Если ничего не подходит, то пытайся бежать вниз
@@ -108,7 +108,7 @@ export class YuryBot extends Bot {
             this.fire(ACTIONS.down);
             if (!this.haveIStep()) {
                 this.up();
-                this.fire(ACTIONS.up);
+                this.fire(ACTIONS.down);
             }
         }
 
